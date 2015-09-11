@@ -1,3 +1,17 @@
 .heading, .content {
 	text-align: center;
 }
+
+.heading h1 {
+	font-size: 5rem;
+	font-weight: lighter;
+}
+
+.input {
+	margin-bottom: 2rem;
+}
+
+.result #list {
+	display: block;
+	list-style: none;
+}

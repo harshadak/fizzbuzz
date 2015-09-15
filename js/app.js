@@ -23,10 +23,16 @@ function fizzBuzz() {
 	//$('#list').('');
 }
 
+function clearList() {
+	$('#list').empty();
+	$('#inputValue').val('');
+}
+
 
 
 
 $(function() {
 	$('#calculate').on('click', fizzBuzz);
+	$('#clear').on('click', clearList);
 	//numList.empty();
 });

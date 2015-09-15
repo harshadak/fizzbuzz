@@ -27,6 +27,10 @@ body {
 	margin-bottom: 2rem;
 }
 
+#inputValue:focus, #calculate:focus, #clear:focus {
+	outline: none;
+}
+
 .result #list {
 	display: block;
 	list-style: none;

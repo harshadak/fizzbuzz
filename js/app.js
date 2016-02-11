@@ -1,38 +1,25 @@
 function fizzBuzz() {
-	var num = $('#inputValue').val();
-	//var numList = $('.result .content');
-	var numList = $('#list');
+    var num = $('#inputValue').val();
 
-	for (var i = 1; i <= num; i++) {
-		if (i % 15 == 0) {
-			numList.append('<li class="answer">' + "FizzBuzz" + '</li>');
-			//numList.append('<p>FizzBuzz</p>');
-		} else if (i % 5 == 0) {
-			numList.append('<li class="answer">' + "Buzz" + '</li>');
-			//numList.append('<p>Buzz</p>');
-		} else if (i % 3 == 0) {
-			numList.append('<li class="answer">' + "Fizz" + '</li>');
-			//numList.append('<p>Fizz</p>');
-		} else {
-			numList.append('<li class="answer">' + i + '</li>');
-			//numList.append(i);
-		}
-	}
-
-	//$('#inputValue').val('');
-	//$('#list').('');
+    for (var i = 1; i <= num; i++) {
+        if (i % 15 == 0) {
+            $('#list').append('<li class="answer">' + "FizzBuzz" + '</li>');
+        } else if (i % 5 == 0) {
+            $('#list').append('<li class="answer">' + "Buzz" + '</li>');
+        } else if (i % 3 == 0) {
+            $('#list').append('<li class="answer">' + "Fizz" + '</li>');
+        } else {
+            $('#list').append('<li class="answer">' + i + '</li>');
+        }
+    }
 }
 
 function clearList() {
-	$('#list').empty();
-	$('#inputValue').val('');
+    $('#list').empty();
+    $('#inputValue').val('');
 }
 
-
-
-
-$(function() {
-	$('#calculate').on('click', fizzBuzz);
-	$('#clear').on('click', clearList);
-	//numList.empty();
+$(document).ready(function () {
+    $('#calculate').on('click', fizzBuzz);
+    $('#clear').on('click', clearList);
 });
